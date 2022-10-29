@@ -1,0 +1,384 @@
+// Other Contents go here
+
+.content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #0e00ff0d;
+  align-items: center;
+  justify-content: center;
+  padding: 2.875rem 2.3225rem;
+  letter-spacing: 0.6px;
+  font-family: 'Open Sans', sans-serif;
+
+  // for Desktops
+  @include breakpoint-up(large){
+    flex-direction: row-reverse;
+    padding-top: 0;
+    padding-right: 4.875rem;
+    padding-bottom: 4.875rem;
+    padding-left: 4.875rem;
+    }
+
+  &_image {
+
+    img {
+      width: 18.9rem;
+      height: 14.5rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        width: 36.375rem;
+        height: 27.8125rem;
+      }
+    }
+  }
+
+  &_texts {
+    text-align: center;
+    align-items: center;
+
+    // for Desktops
+    @include breakpoint-up(large){
+      text-align: left;
+      margin-top: 7rem;
+    }
+
+    h1 {
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 700;
+      color: $veryDarkBlue;
+      margin-bottom: 1.375rem;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        font-size: 2.4rem;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      text-align: left;
+      color: $veryDarkBlue;
+      line-height: 1.5;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        font-size: 1.4rem;
+        padding-top: 1.5rem;
+        padding-right: 6rem;
+      } 
+    }
+  }
+
+  &_container {
+    position: relative;
+    width: 12.5rem;
+    height: 30px;
+    margin-top: 1.25rem;
+    margin-left: 4.6875rem;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+
+    // for Desktops
+    @include breakpoint-up(large){
+      margin-left: 0;
+      width: 13.5rem;
+    }
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 8.4375rem;
+      height: 2px;
+      background-color: #3c9f8f;
+      margin-left: 0.2rem;
+      margin-top: 0.2rem;
+      opacity: 1;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        width: 10.5rem;
+        margin-top: 0.5rem;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9.375rem;
+    height: 25px;
+    gap: 5px;
+
+    // for Desktops
+    @include breakpoint-up(large){
+      width: 12rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: $moderateCyan;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        font-size: 1rem;
+      }
+    }
+
+    img {
+      width: 1.125rem;
+      height: 1.125rem;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  &_quote {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 95%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding: 16px;
+    box-shadow: 1px 1px 9px 0.1px #2e2b633b;
+
+    // for Desktops
+    @include breakpoint-up(large){
+      width: 65%;
+      margin-top: 5rem;
+    }
+
+    img {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+      text-align: left;
+      color: $veryDarkBlue;
+      line-height: 1.5;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        font-size: 1rem;
+        letter-spacing: 1.3px;
+      }
+    }
+
+    &_end {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2px;
+
+      img {
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 50px;
+      }
+
+      &_texts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-left: 20px;
+
+        h2 {
+          font-size: 1rem;
+          font-weight: 700;
+          color: $veryDarkBlue;
+          margin-bottom: 0;
+
+          // for Desktops
+          @include breakpoint-up(large){
+            font-size: 1.057rem;
+          }
+        }
+  
+        p {
+          font-size: 0.9rem;
+          text-align: left;
+          color: $veryDarkBlue;
+          font-weight: 400;
+          margin-top: 0;
+
+          // for Desktops
+          @include breakpoint-up(large){
+            font-size: 1.057rem;
+            margin-top: -1.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Sub-content Section
+
+.sub_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 2.875rem 2.3225rem;
+  flex-direction: column;
+  background-color: $desaturatedBlue;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.6px;
+  color: $lightGrayishBlue;
+
+  // for Desktops
+  @include breakpoint-up(large){
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    padding-top: 7rem;
+    padding-right: 4.875rem;
+    padding-left: 4.875rem;
+
+  &_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // for Desktops
+    @include breakpoint-up(large){
+      width: 60%;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-right: 120px;
+    }
+
+      h2 {
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 700;
+
+        // for Desktops
+        @include breakpoint-up(large){
+          font-size: 2.2rem;
+        }
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+
+        // for Desktops
+        @include breakpoint-up(large){
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    // for Desktops
+    @include breakpoint-up(large){
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 40%;
+      margin-top: 3rem;
+      margin-bottom: 8rem;
+    }
+
+    input {
+      width: 14.75rem;
+      height: 1.6rem;
+      padding: 1.25rem;
+      font-family: 'Open Sans', sans-serif;
+      border-color: $veryDarkBlue;
+      border-radius: 3px;
+      border-style: solid;
+      border-width: 1px;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        width: 31rem;
+        height: 3.8rem;
+        font-size: 1.4rem;
+      }
+
+      &::placeholder {
+        color: $desaturatedBlue;
+        opacity: 0.4;
+      }
+
+      &:focus {
+        border-color: rgb(255, 96, 96);
+        outline: none;
+      }
+    }
+
+    button {
+      width: 14.75rem;
+      height: 2.2rem;
+      text-align: center;
+      color: $lightGrayishBlue;
+      font-weight: 700;
+      font-family: 'Open Sans', sans-serif;
+      background: $brightBlue;
+      border-radius: 3px;
+      border-style: none;
+      opacity: 1;
+      cursor: pointer;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        width: 17rem;
+        height: 3.8rem;
+        font-size: 1.4rem;
+      }
+        
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+
+

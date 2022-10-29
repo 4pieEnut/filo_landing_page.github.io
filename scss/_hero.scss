@@ -1,0 +1,148 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 4.875rem 2.3225rem;
+  letter-spacing: 0.5px;
+
+  // for Desktops
+  @include breakpoint-up(large){
+    flex-direction: row-reverse;
+    padding-top: 2.875rem;
+    padding-right: 4.875rem;
+    padding-bottom: 14.25rem;;
+    padding-left: 4.875rem;
+    }
+  
+  &_img {
+
+    img {
+      width: 18.9rem;
+      height: 14.5rem;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        width: 36.375rem;
+        height: 27.8125rem;
+      }
+    }
+  }
+
+  &_content {
+
+    // for Desktops
+    @include breakpoint-up(large){
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 3.2rem;
+    }
+  }
+
+  &_text {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+
+    // for Desktops
+    @include breakpoint-up(large){
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      font-weight: 700;
+      color: $veryDarkBlue;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        font-size: 2.9rem;
+      }
+    }
+
+    p {
+      font-size: $font-sm;
+      color: $veryDarkBlue;
+      line-height: 1.5;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        font-size: 1.4rem;
+      } 
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.1875rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    // for Desktops
+    @include breakpoint-up(large){
+      flex-direction: row;
+      margin-top: 0.1875rem;
+    }
+     
+    input {
+      width: 18.75rem;
+      height: 2.025rem;
+      padding: 1.25rem;
+      font-size: 0.9rem;
+      font-family: 'Open Sans', sans-serif;
+      border-color: $veryDarkBlue;
+      border-radius: 3px;
+      border-style: solid;
+      border-width: 1px;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        width: 26rem;
+        height: 3.8rem;
+        font-size: 1.4rem;
+      }
+
+      &::placeholder {
+        color: $desaturatedBlue;
+        opacity: 0.4;
+      }
+
+      &:focus {
+        border-color: rgb(255, 96, 96);
+        outline: none;
+      }
+    }
+
+    button {
+      width: 18.75rem;
+      height: 2.525rem;
+      font-size: 0.9rem;
+      text-align: center;
+      color: $lightGrayishBlue;
+      font-weight: 700;
+      font-family: 'Open Sans', sans-serif;
+      background: $brightBlue;
+      border-radius: 3px;
+      border-style: none;
+      opacity: 1;
+      cursor: pointer;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        width: 17rem;
+        height: 3.8rem;
+        font-size: 1.4rem;
+      }
+        
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

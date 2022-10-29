@@ -1,0 +1,156 @@
+// Footer style
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 27px;
+  background-color: $veryDarkBlue;
+  width: 100%;
+  height: auto;
+  padding: 4rem 2.3225rem;
+
+  // for Desktops
+  @include breakpoint-up(large){
+    padding-top: 5rem;
+    padding-right: 4.875rem;
+    padding-bottom: 5rem;
+    padding-left: 4.875rem;
+  }
+
+  &_image {
+    width: 12.625rem;
+    height: 3.675rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &_texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
+
+    // for Desktops
+    @include breakpoint-up(large){
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 230px;
+    }
+
+    &_contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 15px;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        gap: 25px;
+    }
+
+      a {
+        font-size: 1rem;
+        color: $lightGrayishBlue;
+
+        &:hover {
+          color: $brightBlue;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_one {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 15px;
+
+      &:hover {
+        color: $brightBlue;
+        cursor: pointer;
+      }
+
+      // for Desktops
+      @include breakpoint-up(large){
+        gap: 25px;
+    }
+
+      a {
+        font-size: 1rem;
+        color: $lightGrayishBlue;
+
+        &:hover {
+          color: $brightBlue;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_two {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 15px;
+
+      // for Desktops
+      @include breakpoint-up(large){
+        gap: 25px;
+    }
+
+      a {
+        font-size: 1rem;
+        color: $lightGrayishBlue;
+
+        &:hover {
+          color: $brightBlue;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &_social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8rem;
+    gap: 15px;
+
+    // for Desktops
+    @include breakpoint-up(large){
+      padding-left: 0rem;
+      gap: 25px;
+    }
+
+    a {
+      font-size: 1.2rem;
+      color: $lightGrayishBlue;
+
+      &:hover {
+        color: $brightBlue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+  margin-top: 7rem;
+
+  a {
+    color: white;
+  }
+}

@@ -1,0 +1,25 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a, a:visited a:focus {
+  color: $veryDarkBlue;
+}
+
+// Mobile
+@include breakpoint-down(medium){
+  // Styles go here
+}
+
+// Desktop
+@include breakpoint-up(large){
+  // Styles go here
+}
