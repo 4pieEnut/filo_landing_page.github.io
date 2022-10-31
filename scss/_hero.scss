@@ -6,14 +6,23 @@
   width: 100%;
   height: auto;
   padding: 4.875rem 2.3225rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
+
+  // for Laptops
+  @include breakpoint-up(large){
+    flex-direction: row-reverse;
+    padding-top: 2.575rem;
+    padding-right: 4rem;
+    padding-bottom: 10.25rem;
+    padding-left: 4rem;
+  }
 
   // for Desktops
-  @include breakpoint-up(large){
+  @include breakpoint-up(x-large){
     flex-direction: row-reverse;
     padding-top: 2.875rem;
     padding-right: 4.875rem;
-    padding-bottom: 14.25rem;;
+    padding-bottom: 14.25rem;
     padding-left: 4.875rem;
     }
   
@@ -23,8 +32,14 @@
       width: 18.9rem;
       height: 14.5rem;
 
-      // for Desktops
+      // for Laptops
       @include breakpoint-up(large){
+        width: 30.375rem;
+        height: 24.8125rem;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
         width: 36.375rem;
         height: 27.8125rem;
       }
@@ -33,7 +48,7 @@
 
   &_content {
 
-    // for Desktops
+    // for Laptops
     @include breakpoint-up(large){
       display: flex;
       flex-direction: column;
@@ -47,7 +62,7 @@
     text-align: center;
     font-family: 'Open Sans', sans-serif;
 
-    // for Desktops
+    // for Laptops
     @include breakpoint-up(large){
       text-align: left;
     }
@@ -58,8 +73,13 @@
       font-weight: 700;
       color: $veryDarkBlue;
 
-      // for Desktops
+      // for Laptops
       @include breakpoint-up(large){
+        font-size: 1.7rem;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
         font-size: 2.9rem;
       }
     }
@@ -69,8 +89,13 @@
       color: $veryDarkBlue;
       line-height: 1.5;
 
-      // for Desktops
+      // for Laptops
       @include breakpoint-up(large){
+        font-size: 1rem;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
         font-size: 1.4rem;
       } 
     }
@@ -84,10 +109,15 @@
     justify-content: space-between;
     gap: 10px;
 
-    // for Desktops
+    // for Laptops
     @include breakpoint-up(large){
       flex-direction: row;
-      margin-top: 0.1875rem;
+      margin-top: 0.8875rem;
+    }
+
+    // for Desktops
+    @include breakpoint-up(x-large){
+      margin-top: 1rem;
     }
      
     input {
@@ -101,8 +131,15 @@
       border-style: solid;
       border-width: 1px;
 
-      // for Desktops
+      // for Laptops
       @include breakpoint-up(large){
+        width: 17rem;
+        height: 3rem;
+        font-size: 1rem;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
         width: 26rem;
         height: 3.8rem;
         font-size: 1.4rem;
@@ -133,8 +170,15 @@
       opacity: 1;
       cursor: pointer;
 
-      // for Desktops
+      // for Laptops
       @include breakpoint-up(large){
+        width: 10rem;
+        height: 3rem;
+        font-size: 1rem;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
         width: 17rem;
         height: 3.8rem;
         font-size: 1.4rem;

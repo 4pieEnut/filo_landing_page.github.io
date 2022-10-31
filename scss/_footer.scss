@@ -9,14 +9,17 @@
   background-color: $veryDarkBlue;
   width: 100%;
   height: auto;
-  padding: 4rem 2.3225rem;
+  padding-top: 4rem;
+  padding-right: 2.3225rem;
+  padding-bottom: 2rem;
+  padding-left: 2.3225rem;
 
-  // for Desktops
+  // for Laptops
   @include breakpoint-up(large){
     padding-top: 5rem;
-    padding-right: 4.875rem;
-    padding-bottom: 5rem;
-    padding-left: 4.875rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
   }
 
   &_image {
@@ -35,12 +38,12 @@
     justify-content: flex-start;
     gap: 50px;
 
-    // for Desktops
+    // for Laptops
     @include breakpoint-up(large){
       flex-direction: row;
       align-items: flex-start;
       justify-content: space-between;
-      gap: 230px;
+      gap: 80px;
     }
 
     &_contact {
@@ -50,8 +53,13 @@
       justify-content: flex-start;
       gap: 15px;
 
-      // for Desktops
+      // for Laptops
       @include breakpoint-up(large){
+        gap: 20px;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
         gap: 25px;
     }
 
@@ -78,8 +86,13 @@
         cursor: pointer;
       }
 
-      // for Desktops
+      // for Laptops
       @include breakpoint-up(large){
+        gap: 20px;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
         gap: 25px;
     }
 
@@ -101,8 +114,13 @@
       justify-content: flex-start;
       gap: 15px;
 
-      // for Desktops
+      // for Laptops
       @include breakpoint-up(large){
+        gap: 20px;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
         gap: 25px;
     }
 
@@ -126,10 +144,9 @@
     padding-left: 8rem;
     gap: 15px;
 
-    // for Desktops
+    // for Laptops
     @include breakpoint-up(large){
-      padding-left: 0rem;
-      gap: 25px;
+      gap: 30px;
     }
 
     a {
@@ -145,10 +162,15 @@
 }
 
 .attribution {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   text-align: center;
   color: white;
-  margin-top: 7rem;
+  margin-top: 2rem;
+  
+  // for Laptops
+  @include breakpoint-up(large){
+    margin-left: 17rem;
+  }
 
   a {
     color: white;
