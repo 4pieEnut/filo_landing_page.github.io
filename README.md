@@ -32,9 +32,7 @@ Users should be able to:
 
 
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://4pieenut.github.io/filo_landing_page.github.io/](GitHub pagesges)
 
 ## My process
 
