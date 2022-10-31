@@ -32,7 +32,7 @@ Users should be able to:
 
 
 ### Links
-- Live Site URL: [https://4pieenut.github.io/filo_landing_page.github.io/](GitHub pagesges)
+- Live Site URL: [https://4pieenut.github.io/filo_landing_page.github.io/] (GitHub pages)
 
 ## My process
 
