@@ -46,7 +46,11 @@
         </div>
 
         <form class="hero_form">
-          <input type="email" placeholder="Enter your email..." required>
+          <div class="hero_form_validation">
+            <input type="email" placeholder=" " required>
+            <p class="error-message">Input a valid E-mail address</p>
+            <p class="success-message">Valid E-mail, click button to submit</p>
+          </div>
           <button type="submit">Get Started</button>
         </form>
       </div>
@@ -111,8 +115,12 @@
         </p>
       </div>
       
-      <form>
-        <input type="email" placeholder="email@example.com" required>
+      <form class="sub_content_form">
+        <div class="sub_content_form_validation"                                                                                                                                               jkform_validation">
+          <input type="email" placeholder=" " required>
+          <p class="error-message">Input a valid E-mail address</p>
+          <p class="success-message">Valid E-mail, click button to submit</p>
+        </div>
         <button type="submit">Get Started for Free</button>
       </form>
     </section>

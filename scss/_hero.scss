@@ -75,7 +75,7 @@
 
       // for Laptops
       @include breakpoint-up(large){
-        font-size: 1.7rem;
+        font-size: 2.7rem;
       }
 
       // for Desktops
@@ -91,13 +91,8 @@
 
       // for Laptops
       @include breakpoint-up(large){
-        font-size: 1rem;
-      }
-
-      // for Desktops
-      @include breakpoint-up(x-large){
         font-size: 1.4rem;
-      } 
+      }
     }
   }
 
@@ -112,6 +107,7 @@
     // for Laptops
     @include breakpoint-up(large){
       flex-direction: row;
+      align-items: flex-start;
       margin-top: 0.8875rem;
     }
 
@@ -120,39 +116,70 @@
       margin-top: 1rem;
     }
      
-    input {
-      width: 18.75rem;
-      height: 2.025rem;
-      padding: 1.25rem;
-      font-size: 0.9rem;
-      font-family: 'Open Sans', sans-serif;
-      border-color: $veryDarkBlue;
-      border-radius: 3px;
-      border-style: solid;
-      border-width: 1px;
+    &_validation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
 
       // for Laptops
       @include breakpoint-up(large){
-        width: 17rem;
-        height: 3rem;
-        font-size: 1rem;
+        align-items: flex-start;
+      justify-content: flex-start;
       }
 
-      // for Desktops
-      @include breakpoint-up(x-large){
-        width: 26rem;
-        height: 3.8rem;
-        font-size: 1.4rem;
+      input {
+        width: 14.75rem;
+        height: 1.6rem;
+        padding: 1.25rem;
+        font-family: 'Open Sans', sans-serif;
+        border-color: $veryDarkBlue;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+  
+        // for Laptops
+        @include breakpoint-up(large){
+          width: 20rem;
+          height: 3.2rem;
+          font-size: 1.4rem;
+        }
+  
+        // for Desktops
+        @include breakpoint-up(x-large){
+          width: 31rem;
+          height: 3.8rem;
+        }
+  
+        &::placeholder {
+          color: $veryDarkBlue;
+        }
+  
+        &:focus {
+          border-color: rgb(255, 96, 96);
+          outline: none;
+        }
+  
+        &:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+          display: block;
+          color: rgb(255, 96, 96);
+        }
+  
+        &:not(:focus):not(:placeholder-shown):valid ~ .success-message {
+          display: block;
+          color: rgb(20, 203, 35);
+        }
       }
-
-      &::placeholder {
-        color: $desaturatedBlue;
-        opacity: 0.4;
+  
+      .error-message {
+        display: none;
+        font-size: 0.9rem;
       }
-
-      &:focus {
-        border-color: rgb(255, 96, 96);
-        outline: none;
+  
+      .success-message {
+        display: none;
+        font-size: 0.9rem;
       }
     }
 
@@ -173,15 +200,14 @@
       // for Laptops
       @include breakpoint-up(large){
         width: 10rem;
-        height: 3rem;
-        font-size: 1rem;
+        height: 3.2rem;
+        font-size: 1.4rem;
       }
 
       // for Desktops
       @include breakpoint-up(x-large){
         width: 17rem;
         height: 3.8rem;
-        font-size: 1.4rem;
       }
         
       &:hover {
