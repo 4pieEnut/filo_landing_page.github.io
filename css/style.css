@@ -163,7 +163,7 @@ nav {
 
 @media (min-width: 64em) {
   .hero_text h1 {
-    font-size: 1.7rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -181,12 +181,6 @@ nav {
 
 @media (min-width: 64em) {
   .hero_text p {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .hero_text p {
     font-size: 1.4rem;
   }
 }
@@ -203,6 +197,7 @@ nav {
 @media (min-width: 64em) {
   .hero_form {
     flex-direction: row;
+    align-items: flex-start;
     margin-top: 0.8875rem;
   }
 }
@@ -213,11 +208,25 @@ nav {
   }
 }
 
-.hero_form input {
-  width: 18.75rem;
-  height: 2.025rem;
+.hero_form_validation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+@media (min-width: 64em) {
+  .hero_form_validation {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.hero_form_validation input {
+  width: 14.75rem;
+  height: 1.6rem;
   padding: 1.25rem;
-  font-size: 0.9rem;
   font-family: 'Open Sans', sans-serif;
   border-color: #070439;
   border-radius: 3px;
@@ -226,29 +235,47 @@ nav {
 }
 
 @media (min-width: 64em) {
-  .hero_form input {
-    width: 17rem;
-    height: 3rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .hero_form input {
-    width: 26rem;
-    height: 3.8rem;
+  .hero_form_validation input {
+    width: 20rem;
+    height: 3.2rem;
     font-size: 1.4rem;
   }
 }
 
-.hero_form input::placeholder {
-  color: #585989;
-  opacity: 0.4;
+@media (min-width: 87.5em) {
+  .hero_form_validation input {
+    width: 31rem;
+    height: 3.8rem;
+  }
 }
 
-.hero_form input:focus {
+.hero_form_validation input::placeholder {
+  color: #070439;
+}
+
+.hero_form_validation input:focus {
   border-color: #ff6060;
   outline: none;
+}
+
+.hero_form_validation input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block;
+  color: #ff6060;
+}
+
+.hero_form_validation input:not(:focus):not(:placeholder-shown):valid ~ .success-message {
+  display: block;
+  color: #14cb23;
+}
+
+.hero_form_validation .error-message {
+  display: none;
+  font-size: 0.9rem;
+}
+
+.hero_form_validation .success-message {
+  display: none;
+  font-size: 0.9rem;
 }
 
 .hero_form button {
@@ -269,8 +296,8 @@ nav {
 @media (min-width: 64em) {
   .hero_form button {
     width: 10rem;
-    height: 3rem;
-    font-size: 1rem;
+    height: 3.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -278,7 +305,6 @@ nav {
   .hero_form button {
     width: 17rem;
     height: 3.8rem;
-    font-size: 1.4rem;
   }
 }
 
@@ -360,7 +386,7 @@ nav {
 
 @media (min-width: 64em) {
   .content_texts h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -379,16 +405,14 @@ nav {
 
 @media (min-width: 64em) {
   .content_texts p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding-top: 1.5rem;
-    padding-right: 0rem;
+    padding-right: 2rem;
   }
 }
 
 @media (min-width: 87.5em) {
   .content_texts p {
-    font-size: 1.4rem;
-    padding-top: 1.5rem;
     padding-right: 6rem;
   }
 }
@@ -404,13 +428,6 @@ nav {
 }
 
 @media (min-width: 64em) {
-  .content_container {
-    margin-left: 0;
-    width: 13.5rem;
-  }
-}
-
-@media (min-width: 87.5em) {
   .content_container {
     margin-left: 0;
     width: 13.5rem;
@@ -502,7 +519,7 @@ nav {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 95%;
+  width: 80%;
   height: auto;
   border-radius: 5px;
   margin-top: 2rem;
@@ -513,7 +530,7 @@ nav {
 
 @media (min-width: 64em) {
   .content_quote {
-    width: 80%;
+    width: 75%;
     margin-top: 3rem;
   }
 }
@@ -541,13 +558,7 @@ nav {
 
 @media (min-width: 64em) {
   .content_quote p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .content_quote p {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -673,12 +684,6 @@ nav {
 
 @media (min-width: 64em) {
   .sub_content_text h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .sub_content_text h2 {
     font-size: 2.2rem;
   }
 }
@@ -690,17 +695,12 @@ nav {
 
 @media (min-width: 64em) {
   .sub_content_text p {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .sub_content_text p {
     font-size: 1.4rem;
+    padding-right: 1rem;
   }
 }
 
-.sub_content form {
+.sub_content_form {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
@@ -711,7 +711,7 @@ nav {
 }
 
 @media (min-width: 64em) {
-  .sub_content form {
+  .sub_content_form {
     align-items: flex-start;
     justify-content: flex-start;
     width: 40%;
@@ -720,7 +720,22 @@ nav {
   }
 }
 
-.sub_content form input {
+.sub_content_form_validation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+@media (min-width: 64em) {
+  .sub_content_form_validation {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.sub_content_form_validation input {
   width: 14.75rem;
   height: 1.6rem;
   padding: 1.25rem;
@@ -732,32 +747,48 @@ nav {
 }
 
 @media (min-width: 64em) {
-  .sub_content form input {
+  .sub_content_form_validation input {
     width: 20rem;
-    height: 3rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .sub_content form input {
-    width: 31rem;
-    height: 3.8rem;
+    height: 3.2rem;
     font-size: 1.4rem;
   }
 }
 
-.sub_content form input::placeholder {
-  color: #585989;
-  opacity: 0.4;
+@media (min-width: 87.5em) {
+  .sub_content_form_validation input {
+    width: 31rem;
+    height: 3.8rem;
+  }
 }
 
-.sub_content form input:focus {
+.sub_content_form_validation input::placeholder {
+  color: #070439;
+}
+
+.sub_content_form_validation input:focus {
   border-color: #ff6060;
   outline: none;
 }
 
-.sub_content form button {
+.sub_content_form_validation input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block;
+}
+
+.sub_content_form_validation input:not(:focus):not(:placeholder-shown):valid ~ .success-message {
+  display: block;
+}
+
+.sub_content_form_validation .error-message {
+  display: none;
+  font-size: 0.9rem;
+}
+
+.sub_content_form_validation .success-message {
+  display: none;
+  font-size: 0.9rem;
+}
+
+.sub_content_form button {
   width: 14.75rem;
   height: 2.2rem;
   text-align: center;
@@ -772,22 +803,21 @@ nav {
 }
 
 @media (min-width: 64em) {
-  .sub_content form button {
+  .sub_content_form button {
     width: 15rem;
-    height: 3rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .sub_content form button {
-    width: 17rem;
-    height: 3.8rem;
+    height: 3.2rem;
     font-size: 1.4rem;
   }
 }
 
-.sub_content form button:hover {
+@media (min-width: 87.5em) {
+  .sub_content_form button {
+    width: 17rem;
+    height: 3.8rem;
+  }
+}
+
+.sub_content_form button:hover {
   opacity: 0.7;
 }
 
@@ -837,7 +867,7 @@ nav {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 80px;
+    gap: 150px;
   }
 }
 
