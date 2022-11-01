@@ -1,0 +1,178 @@
+// Footer style
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 27px;
+  background-color: $veryDarkBlue;
+  width: 100%;
+  height: auto;
+  padding-top: 4rem;
+  padding-right: 2.3225rem;
+  padding-bottom: 2rem;
+  padding-left: 2.3225rem;
+
+  // for Laptops
+  @include breakpoint-up(large){
+    padding-top: 5rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+  }
+
+  &_image {
+    width: 12.625rem;
+    height: 3.675rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &_texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
+
+    // for Laptops
+    @include breakpoint-up(large){
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 150px;
+    }
+
+    &_contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 15px;
+
+      // for Laptops
+      @include breakpoint-up(large){
+        gap: 20px;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
+        gap: 25px;
+    }
+
+      a {
+        font-size: 1rem;
+        color: $lightGrayishBlue;
+
+        &:hover {
+          color: $brightBlue;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_one {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 15px;
+
+      &:hover {
+        color: $brightBlue;
+        cursor: pointer;
+      }
+
+      // for Laptops
+      @include breakpoint-up(large){
+        gap: 20px;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
+        gap: 25px;
+    }
+
+      a {
+        font-size: 1rem;
+        color: $lightGrayishBlue;
+
+        &:hover {
+          color: $brightBlue;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_two {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 15px;
+
+      // for Laptops
+      @include breakpoint-up(large){
+        gap: 20px;
+      }
+
+      // for Desktops
+      @include breakpoint-up(x-large){
+        gap: 25px;
+    }
+
+      a {
+        font-size: 1rem;
+        color: $lightGrayishBlue;
+
+        &:hover {
+          color: $brightBlue;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &_social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8rem;
+    gap: 15px;
+
+    // for Laptops
+    @include breakpoint-up(large){
+      gap: 30px;
+    }
+
+    a {
+      font-size: 1.2rem;
+      color: $lightGrayishBlue;
+
+      &:hover {
+        color: $brightBlue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 0.9rem;
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+  
+  // for Laptops
+  @include breakpoint-up(large){
+    margin-left: 17rem;
+  }
+
+  a {
+    color: white;
+  }
+}
